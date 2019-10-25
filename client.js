@@ -18,6 +18,10 @@ const connect = function() {
     conn.on('connect', () => {   ///sending a name/snake initials
       conn.write('Name: NPH');
     });
+
+    // conn.on('connect', () => {
+    //   conn.write("Move: down");
+    // });
     // interpret incoming data as text
 
   return conn;
