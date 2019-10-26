@@ -11,18 +11,17 @@ const connect = function() {
     console.log('Server says: ', data);
   });
   
-    conn.on('connect', () => {
-      console.log("Successfully connected to game server")
-    })
+  conn.on('connect', () => {
+    console.log("Successfully connected to game server")
+  })
 
-    conn.on('connect', () => {   ///sending a name/snake initials
-      conn.write('Name: NPH');
-    });
+  conn.on('connect', () => {   ///sending a name/snake initials
+    conn.write('Name: NPH');
+  });
 
-    // conn.on('connect', () => {
-    //   conn.write("Move: down");
-    // });
-    // interpret incoming data as text
+  // conn.on('connect', () => {
+  //   conn.write("Move: down");
+  // });
 
   return conn;
 }
